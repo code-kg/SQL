@@ -1,0 +1,34 @@
+Task 1.
+
+create table visitor(
+name varchar (500) unique not null,
+birth_date integer not null,
+gender varchar(10) not null
+);
+create table visits(
+visitors varchar (500) references visitor (name) not null,
+visit_time integer not null,
+trainers_id integer references trainer(trainerId) primary key
+);
+insert into visitor (name,birth_date,gender) values('visitor4',1990,'f');
+insert into visits (visitors,visit_time,trainers_id) values('visitor1', 12, 1);
+
+
+
+Task 2.
+
+Как вы понимаете Git?
+- Удаленный репозиторий для работы с версиями программного обеспечения.
+Для чего нам нужны Базы Данных?
+- Базы Данных нужны для работы и хранения данных.
+Что такое первичный ключ (Primary Key)?
+- Первичный ключ - это поле в таблице, которое идентифицирует каждую строку / запись в таблице базы данных.
+Что такое внешний ключ (Foreign Key)?
+- Foreign Key - это поле, которое напрямую идентифицирует другую таблицу.
+- Внешний ключ - это столбец или комбинация столбцов, значения которых соответствуют первичному ключу в другой таблице.
+Чем отличаются колонки от строк?
+- Колонки это переменные которые создаются при создании таблиц, строки это значения колонок.
+Чем отличаются таблицы от базы данных?
+- Таблицы это состовляющая часть базы данных.
+Что такое CRUD операции?
+- reate, read, update and delete - операции при работе с таблицами как создание, чтение, обновление и удаление.
